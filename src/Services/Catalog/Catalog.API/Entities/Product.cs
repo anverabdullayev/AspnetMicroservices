@@ -6,7 +6,7 @@ namespace Catalog.API.Entities
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-        public string ObjectId { get; set; }
+        public string Id { get; set; }
         [BsonElement("Name")]
         public string Name { get; set; }
         public string Category { get; set; }
