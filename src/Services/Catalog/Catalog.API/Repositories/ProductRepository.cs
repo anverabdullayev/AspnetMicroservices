@@ -27,7 +27,7 @@ namespace Catalog.API.Repositories
             return await _context.Products.Find(filter).ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductsByCategory(string categoryName)
+        public async Task<IEnumerable<Product>> GetProductByCategory(string categoryName)
         {
             FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, categoryName);
             return await _context.Products.Find(filter).ToListAsync();
