@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace Discount.Grpc
 {
@@ -17,6 +18,9 @@ namespace Discount.Grpc
             services.AddScoped<IDiscountRepository, DiscountRepository>();
 
             services.AddAutoMapper(typeof(Startup));
+
+            services.AddLogging();
+            services.AddSingleton(typeof(ILogger), typeof(Logger<Startup>));
 
             services.AddGrpc();
         }
