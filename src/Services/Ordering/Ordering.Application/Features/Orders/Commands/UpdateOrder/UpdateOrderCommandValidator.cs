@@ -2,7 +2,7 @@
 
 namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
 {
-    class UpdateOrderCommandValidator : AbstractValidator<UpdateOrderCommand>
+    public class UpdateOrderCommandValidator : AbstractValidator<UpdateOrderCommand>
     {
         public UpdateOrderCommandValidator()
         {
